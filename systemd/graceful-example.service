@@ -3,7 +3,7 @@ Description=graceful-example
 After=syslog.target network.target
 
 [Service]
-Type=forking
+Type=simple
 PIDFile=/var/run/graceful-example.pid
 ExecStart=/usr/local/bin/graceful-example --pid-file=/var/run/graceful-example.pid --listen=:8080
 ExecReload=/bin/kill -s HUP $MAINPID
