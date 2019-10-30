@@ -1,0 +1,17 @@
+[Unit]
+Description=Go Example
+After=syslog.target network.target
+
+[Service]
+Type=forking
+PIDFile=/run/local/go-example.pid
+ExecStart=/usr/local/bin/go-example --pid-file=/run/local/go-example.pid --port=8080
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+KillSignal=SIGQUIT
+TimeoutStopSec=5
+KillMode=process
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
