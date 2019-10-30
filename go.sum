@@ -1,0 +1,4 @@
+github.com/cloudflare/tableflip v1.0.0 h1:4wH3CxGBy/N0L5hrifOz5ldJUb8DCaq5i0x9Q6+mkF0=
+github.com/cloudflare/tableflip v1.0.0/go.mod h1:JxQ7OEXHm5lWh7l4QwFvp6d1aLGGxqPV/thmggcYqjw=
+github.com/pkg/errors v0.8.1 h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
+github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
