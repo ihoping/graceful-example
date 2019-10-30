@@ -1,9 +1,13 @@
 package main
 
 import (
+	"github.com/gin-gonic/gin"
 	"graceful-example/graceful"
+	"graceful-example/router"
 )
 
 func main() {
-	graceful.ExampleHttpShutdown()
+	engine := gin.Default()
+	router.InitRoute(&engine.RouterGroup)
+	graceful.ExampleHttpShutdown(engine)
 }

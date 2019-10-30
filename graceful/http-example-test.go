@@ -16,7 +16,7 @@ import (
 
 // This shows how to use the upgrader
 // with the graceful shutdown facilities of net/http.
-func ExampleHttpShutdown() {
+func ExampleHttpShutdown(handler http.Handler) {
 	var (
 		listenAddr = flag.String("listen", "localhost:8090", "`Address` to listen on")
 		pidFile    = flag.String("pid-file", "", "`Path` to pid file")
@@ -51,6 +51,7 @@ func ExampleHttpShutdown() {
 	}
 
 	server := http.Server{
+		Handler: handler,
 		// Set timeouts, etc.
 	}
 
