@@ -1,11 +1,11 @@
 [Unit]
-Description=Go Example
+Description=graceful-example
 After=syslog.target network.target
 
 [Service]
 Type=forking
-PIDFile=/run/local/go-example.pid
-ExecStart=/usr/local/bin/go-example --pid-file=/run/local/go-example.pid --port=8080
+PIDFile=/run/run/graceful-example.pid
+ExecStart=/usr/local/bin/graceful-example --pid-file=/run/run/graceful-example.pid --port=8080
 ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s QUIT $MAINPID
 KillSignal=SIGQUIT
