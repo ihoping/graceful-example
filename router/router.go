@@ -20,7 +20,7 @@ func InitRoute(router *gin.RouterGroup) {
 	})
 	apiRouter.GET("/get-name", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"name": "lts004",
+			"name": "lts005",
 		})
 	})
 	apiRouter.GET("/exit-system", func(c *gin.Context) {
