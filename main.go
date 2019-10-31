@@ -9,5 +9,5 @@ import (
 func main() {
 	engine := gin.Default()
 	router.InitRoute(&engine.RouterGroup)
-	graceful.ExampleHttpShutdown(engine)
+	graceful.ExampleHttp(engine)
 }

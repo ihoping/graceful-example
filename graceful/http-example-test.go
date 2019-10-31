@@ -16,7 +16,7 @@ import (
 
 // This shows how to use the upgrader
 // with the graceful shutdown facilities of net/http.
-func ExampleHttpShutdown(handler http.Handler) {
+func ExampleHttp(handler http.Handler) {
 	var (
 		listenAddr = flag.String("listen", "localhost:8090", "`Address` to listen on")
 		pidFile    = flag.String("pid-file", "", "`Path` to pid file")
